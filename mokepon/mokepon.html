@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>MOKEPON!</title>
+    <!--vincular el código JS-->
+    <script src="./js/mokepon.js"></script>
+    <link rel="stylesheet" href="./estilo.css">
+    <style>
+        body {
+            background-image: url(imagen_de_fondo.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="seleccionar-mascota">
+        <!--dar identificacion a la seleccion-->
+        <!--h1 titulo principal del juego--- solo se usa una vez-->
+        <h1 class="title"> ¡MOKEPON! </h1>
+        <!--etiqueta h2 para poner subtitulos  -->
+        <h2 class="subtitle">Elige tu mascota:</h2>
+
+        <div class="tarjetas">
+            <!--codigo para seleccionar mascota, el input es una etiqueta que se cierra sola
+            type es para saber que tipo de input queremos, el "radio" es para que el boton 
+            sea un circulo, name se usa como atributo para encapsular el grupo, id es para darle identificador a cada elemento
+            label se abre y se cierra, este ayuda a indicarle al usuario que es lo que está seleccionado  
+            el for nos ayuda a vincular un label con un input, ejemplo, si el usuario no hace click en el círculo sino en el nombre
+            de la mascota, automáticamente la selecciona-->
+                <div class="mokepones_fila_uno">
+                    <input type="radio" name="mascota" id="hipodoge" />
+                    <label class="tarjeta-de-mokepon" for="hipodoge">
+                    <p>Hipodoge</p>
+                    <img src="./mascotas/hipodoge.png" alt="Hipodoge">
+                </label>
+
+                <input type="radio" name="mascota" id="capipepo" />
+                <label class="tarjeta-de-mokepon" for="capipepo">
+                    <p>Capipepo</p>
+                    <img src="./mascotas/capipepo.png" alt="Capipepo">
+                </label>
+
+                <input type="radio" name="mascota" id="ratigueya" />
+                <label class="tarjeta-de-mokepon" for="ratigueya">
+                    <p>Ratigueya</p>
+                    <img src="./mascotas/ratigueya.png" alt="Ratigueya">
+                </label>
+
+            </div>
+
+            <div class="mokepones_fila_2">
+                <input type="radio" name="mascota" id="langostelvis" />
+                <label class="tarjeta-de-mokepon" for="langostelvis">
+                    <p>Langostelvis</p>
+                    <img src="./mascotas/langostelvis.png" alt="Langostelvis">
+                </label>
+
+                <input type="radio" name="mascota" id="tucapalma" />
+                <label class="tarjeta-de-mokepon" for="tucapalma">
+                    <p>Tucapalma</p>
+                    <img src="./mascotas/tucapalma.png" alt="Tucapalma">
+                </label>
+
+                <input type="radio" name="mascota" id="pydos" />
+                <label class="tarjeta-de-mokepon" for="pydos">
+                    <p>Pydos</p>
+                    <img src="./mascotas/pydos.png" alt="Pydos">
+                </label>
+            </div>
+        </div>
+
+        <!--Hipodoge -> Agua
+            Capipepo -> Tierra
+            Ratigueya -> Fuego
+            Langostelvis -> Agua y Fuego
+            Tucapalma -> Agua y Tierra
+            Pydos -> Tierra y Fuego -->
+
+        <!--el id se usa para darle un identificador a cada botón que lo diferencie de los demás-->
+        <button class="button" id="boton-mascota">Seleccionar</button>
+    </section>
+
+    <section id="seleccionar-ataque">
+        <h1 class="title"> ¡MOKEPON! </h1>
+
+        <h2 class="subtitle">Elige tu ataque:</h2>
+
+        <div>
+            <button id="boton-fuego" class="boton-ataque">Fuego 🔥</button>
+            <button id="boton-agua" class="boton-ataque">Agua 💦</button>
+            <button id="boton-tierra" class="boton-ataque">Tierra 🌱</button>
+        </div>
+
+        <div>
+            
+                <!--<section id="mensajes">dejar estructura del mensaje porque realmente debe escribirse en JS-->
+                <!--<p> esto es lo que debe ir escrito en JS: Tu mascota atacó con FUEGO, la mascota del enemigo atacó con TIERRA - GANASTE 🥳</p>--</section-->
+
+            <div id="resultado"></div>
+            <div id="ataques-jugador"></div>
+            <div id="ataques-enemigo"></div>
+
+            <section id="reiniciar">
+                <button id="boton-reiniciar">Reiniciar</button>
+            </section>
+        </div>
+
+        <div>
+            <!--uso de span para hacer una parte del texto dinámico (que cambie conforme va el juego)
+                se usa el id en este caso para identificar el grupo donde está la información que quiero que cambie 
+                conforme a la elección del jugador-->
+            <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador"> 3</span> vidas</p>
+            <p>La mascota del enemigo, <span id="mascota-enemigo"></span> tiene <span id="vidas-enemigo">3</span> vidas
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>

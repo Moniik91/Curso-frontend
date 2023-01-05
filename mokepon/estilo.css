@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Josefin+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: rgb(96, 2, 113);
+    font-family: 'Chango', cursive;
+    font-size: 50px;
+
+}
+
+.subtitle {
+    color: rgb(96, 2, 113);
+    font-family: 'Chango', cursive;
+    font-size: 28px;
+}
+
+.tarjetas {
+    display: flex;
+    gap: 100px;
+
+}
+
+
+.tarjeta-de-mokepon {
+    width: 200px;
+    height: 120px;
+    background: #c992e6;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid antiquewhite;
+    box-shadow: 5px 5px 5px #450B31;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lightgrey;
+}
+
+.tarjeta-de-mokepon img {
+    width: 100px;
+}
+
+.button {
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border-radius: 30px;
+    color: rgb(65, 49, 165);
+    font-family: 'Chango', cursive;
+    margin-top: 30px;
+}
+
+input {
+    display: none;
+}
+
+input {
+    display: none;
+}
+
+input:checked+label {
+    background-color: #27C8D0;
+    color: #BB1B84;
+}
+
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-ataque {
+    background-color: #0e91ce;
+    border-radius: 20px;
+    border-color: transparent;
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    color: rgb(81, 62, 204);
+    font-family: 'Chango', cursive;
+    margin-top: 30px;
+}
